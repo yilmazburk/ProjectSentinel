@@ -1,17 +1,16 @@
 package com.sentinel.engine.controller;
 
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+@RestController
 public class HelloWorld {
 	
-	@RequestMapping("/welcome")
-	public ModelAndView helloWorld() {
+	@RequestMapping(value = "/welcome.json", method = RequestMethod.POST)
+	public String getHelloWorld() {
  
-		String message = "<br><div style='text-align:center;'>"
-				+ "<h3>********** Hello World, Spring MVC Tutorial</h3>This message is coming from HelloWorld.java **********</div><br><br>";
-		return new ModelAndView("welcome", "message", message);
+		String message = "{\"id\":2,\"content\":\"Hello, User!\"}";
+		return message;
 	}
 }
