@@ -1,16 +1,9 @@
+<%@ page contentType="text/html; charset=UTF-8" %>
 <html>
 <head>
-<title>Hello World Spring MVC
-	Example</title>
-<style type="text/css">
-</style>
+<title>Hello World</title>
 </head>
-<body>${message}
- 
-	<br>
-	<br>
-	<div style="font-family: verdana; padding: 10px; border-radius: 10px; font-size: 12px; text-align:center;">
-		Spring MCV Tutorial.
-	</div>
+<body>
+   <h2>${message}</h2>
 </body>
 </html>
